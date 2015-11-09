@@ -14,6 +14,10 @@ RUN export GOPATH=/go && \
   apk del go gcc musl-dev make bash && \
   rm -rf /var/cache/apk/*
 
+# Install consul-template
+ADD https://github.com/hashicorp/consul-template/releases/download/v0.11.0/consul_template_0.11.0_linux_amd64.zip /tmp/consultemplate.zip
+RUN cd /bin && unzip /tmp/consultemplate.zip && chmod +x /bin/consul-template && rm /tmp/consultemplate.zip
+
 # Register consul init.d
 COPY consul.init.d /etc/init.d/consul
 RUN chmod 755 /etc/init.d/consul
