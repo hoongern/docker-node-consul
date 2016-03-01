@@ -1,4 +1,4 @@
-FROM faithlife/node
+FROM faithlife/node:4.4.0-rc.2
 
 ENV CONSUL_VERSION=0.5.2
 
