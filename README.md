@@ -1,7 +1,7 @@
 # `faithlife/node-consul` Docker Image
 ### A small base for node projects that use consul.
 
-This image adds [Consul](https://consul.io) to [`faithlife/node`](https://github.com/faithlife/docker-node).
+This image adds [Consul](https://consul.io) to [mhart/alpine-node](https://github.com/mhart/alpine-node).
 
 ###### Configuration
 
