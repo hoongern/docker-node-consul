@@ -1,9 +1,9 @@
-FROM mhart/alpine-node:6
+FROM mhart/alpine-node:7
 
 ENV CONSUL_VERSION=0.7.0
 ENV ENVCONSUL_VERSION=0.6.1
 
-RUN apk add --update curl git 
+RUN apk add --update curl git
 
 # Install consul
 RUN curl -sL -o /tmp/consul.zip https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_amd64.zip && \
