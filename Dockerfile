@@ -2,8 +2,12 @@ FROM mhart/alpine-node:7
 
 ENV CONSUL_VERSION=0.7.0
 ENV ENVCONSUL_VERSION=0.6.1
+ENV YARN_VERSION 0.23.4
 
 RUN apk add --update curl git
+
+# Install yarn
+RUN curl -o- -L https://yarnpkg.com/install.sh | /bin/sh -s -- --version $YARN_VERSION
 
 # Install consul
 RUN curl -sL -o /tmp/consul.zip https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_amd64.zip && \
