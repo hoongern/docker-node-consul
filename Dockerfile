@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:8
+FROM mhart/alpine-node:8.9.4
 
 ENV CONSUL_VERSION=0.9.2
 ENV ENVCONSUL_VERSION=0.7.1
